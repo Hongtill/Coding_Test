@@ -1,3 +1,5 @@
+# 스택/큐
+
 from collections import deque
 
 def solution(arr):
