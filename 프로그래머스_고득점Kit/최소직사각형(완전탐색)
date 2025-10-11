@@ -1,0 +1,30 @@
+def solution(sizes):
+    
+    max_x = 0
+    max_y = 0
+    
+    # x가 y보다 항상 크도록 sizes 리스트 변경
+    for i in sizes :
+        x = i[0]
+        y = i[1]
+        
+        if x < y :
+            i[0] = y
+            i[1] = x
+        else :
+            continue
+    
+    for i in sizes :
+        x = i[0]
+        y = i[1]
+        
+        if (max_x <= x) :
+            max_x = x
+            
+        if (max_y <= y) :
+            max_y = y
+            
+    
+    max_size = max_x*max_y
+    
+    return max_size
